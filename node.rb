@@ -17,4 +17,5 @@ class Node
 
   private
     attr_writer :next
+
 end
