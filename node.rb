@@ -13,4 +13,5 @@ class Node
   def remove_after
     @next = nil
   end
+  
 end
