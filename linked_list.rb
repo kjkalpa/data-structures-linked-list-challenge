@@ -22,7 +22,15 @@ class LinkedList
     self.root_node = root_node.next if root_node
   end
 
-  
+  def insert_last(element)
+    next_node = @root_node 
+    while next_node.next
+      next_node = next_node.next 
+    end
+    next_node.insert_after(Node.new(element))
+  end
+
+
 end
 
 

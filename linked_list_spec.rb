@@ -49,6 +49,12 @@ describe LinkedList do
   end
 
   context '#insert_last' do 
+    it 'should insert element to end of list' do 
+      list.insert_first(10) 
+      list.insert_first(9) 
+      list.insert_last(11)
+      expect(list.root_node.next.next.element).to eq(11)
+    end
   end
 
   context '#remove_last' do 
