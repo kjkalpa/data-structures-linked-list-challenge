@@ -24,9 +24,34 @@ describe LinkedList do
       list.insert_first(9) 
       list.insert_first(10) 
       next_node = list.root_node.next
-      p next_node
       expect(next_node.element).to eq(9)
     end
+  end
+
+  context '#remove_first' do 
+    it 'should return nil if empty' do 
+      list.remove_first
+      expect(list.root_node).to eq(nil)
+    end
+
+    it 'should return nil after removing only item' do 
+      list.insert_first(9)
+      list.remove_first
+      expect(list.root_node).to eq(nil)
+    end
+
+    it 'should remove the first item in the list' do 
+      list.insert_first(9) 
+      list.insert_first(10) 
+      list.remove_first
+      expect(list.root_node.element).to eq(9)
+    end
+  end
+
+  context '#insert_last' do 
+  end
+
+  context '#remove_last' do 
   end
 
 end
