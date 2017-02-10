@@ -18,17 +18,11 @@ class LinkedList
     end
   end
 
+  def remove_first
+    self.root_node = root_node.next if root_node
+  end
+
+  
 end
 
-
-
-# insert_first(element)
-# create Node.new(element)
-# if root_node = nil 
-#   root_node = current_node
-# else
-#   temp_node = root_node
-#   root_node = Node.new(element) 
-#   root_node.next = temp.node
-# end
 
